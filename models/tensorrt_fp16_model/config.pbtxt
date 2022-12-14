@@ -1,0 +1,21 @@
+name: "tensorrt_fp16_model"
+platform: "tensorrt_plan"
+max_batch_size: 32
+
+input [ 
+    {
+        name: "input_1"
+        data_type: TYPE_FP16
+        dims: [ 224, 224, 3 ]
+
+    }
+]
+
+output [
+    {
+        name: "predictions"
+        data_type: TYPE_FP16
+        dims: [ 1000 ]
+    }
+]
+
